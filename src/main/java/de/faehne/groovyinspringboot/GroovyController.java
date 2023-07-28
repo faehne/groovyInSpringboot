@@ -53,7 +53,7 @@ public class GroovyController {
 
     @PostMapping("/scripts/direct/execute")
     public ResponseEntity executeScriptAll(@RequestBody String script) {
-        return ResponseEntity.ok(shell.evaluate(script));
+        return ResponseEntity.ok(shellAll.evaluate(script));
     }
 
     @PostMapping("/scripts/{scriptname}/execute")
