@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "e6747c6f-5b69-4286-860d-b1d94294cd0c",
+		"name": "groovyInSpringboot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6527707"
+	},
+	"item": [
+		{
+			"name": "direct execute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "import static de.faehne.groovyinspringboot.DslExample.test;\r\n//Fell free to change\r\ntest 'holger', {\r\n    write all\r\n    write one\r\n    settings {\r\n        a = 1\r\n        b = 2\r\n    }\r\n}\r\n\r\nRegel {\r\n    Name 'Regel1'\r\n    Beschreibung 'Bla Bla'\r\n    Typ blacklist\r\n    Bedingungen {\r\n        {\r\n            Name 'AlterJung'\r\n            {\r\n                VNAlter < 25 \r\n            }\r\n        }\r\n    }\r\n}\r\n\r\n//x++\r\n//import org.apache.commons.lang.*;\r\n\r\n//\"Hallo Welt \".concat groovyService.multiplyString \"x\" , 4\r\n//\"Hallo Welt \".concat(groovyService.multiplyString(\"x\" , 4))\r\n//groovyService.multiplyString \"x\" , 4\r\n//new File(\".\").listFiles()\r\n//DoWithStrings.repeat \"x\", 20\r\n\r\n\r\n//von werte drucke \"Fleisch\"\r\n//von werte drucke erstes\r\n//von werte drucke alles\r\n//von werte hole \"Fleisch\""
+				},
+				"url": {
+					"raw": "http://localhost:8080/scripts/direct/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scripts",
+						"direct",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "execute",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//import org.apache.commons.lang.*;\r\n\r\n//\"Hallo Welt \".concat groovyService.multiplyString \"x\" , 4\r\n//\"Hallo Welt \".concat(groovyService.multiplyString(\"x\" , 4))\r\n//groovyService.multiplyString \"x\" , 4\r\n//new File(\".\").listFiles()\r\nDoWithStrings.repeat \"x\", 20\r\n\r\n\r\n//von werte drucke \"Fleisch\"\r\n//von werte drucke erstes\r\n//von werte drucke alles\r\n//von werte hole \"Fleisch\""
+				},
+				"url": {
+					"raw": "http://localhost:8080/scripts/test/execute",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scripts",
+						"test",
+						"execute"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save script",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//import org.apache.commons.lang.*;\r\n\r\n//\"Hallo Welt \".concat groovyService.multiplyString \"x\" , 4\r\n//\"Hallo Welt \".concat(groovyService.multiplyString(\"x\" , 4))\r\n//groovyService.multiplyString \"x\" , 4\r\n//new File(\".\").listFiles()\r\nDoWithStrings.repeat \"x\", 20\r\n\r\n\r\nvon werte drucke \"Fleisch\"\r\nvon werte drucke erstes\r\nvon werte drucke alles\r\nvon werte hole \"Fleisch\""
+				},
+				"url": {
+					"raw": "http://localhost:8080/scripts/test/savescript",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scripts",
+						"test",
+						"savescript"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "save variables",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"werte\": {\r\n        \"Salat\": \"Nudelsalat\",\r\n        \"Fleisch\": \"Schnitzel\",\r\n        \"x\": \"y\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scripts/test/savevariables",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scripts",
+						"test",
+						"savevariables"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
